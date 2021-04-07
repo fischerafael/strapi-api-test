@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evaluations",
+  "info": {
+    "name": "Evaluations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "hasVisited": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "hasSeen": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "resting": {
+      "type": "float",
+      "required": true,
+      "max": 1,
+      "min": 0,
+      "default": 0.5
+    },
+    "working": {
+      "type": "float",
+      "default": 0.5,
+      "required": true,
+      "max": 1,
+      "min": 0
+    },
+    "development": {
+      "type": "float",
+      "default": 0.5,
+      "required": true,
+      "max": 1,
+      "min": 0
+    },
+    "reacreation": {
+      "type": "float",
+      "max": 1,
+      "min": 0,
+      "required": true,
+      "default": 0.5
+    },
+    "mandatory": {
+      "type": "float",
+      "default": 0.5,
+      "required": true,
+      "max": 1,
+      "min": 0
+    },
+    "project": {
+      "model": "project",
+      "via": "evaluations"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

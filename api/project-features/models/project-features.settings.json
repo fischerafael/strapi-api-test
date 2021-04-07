@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_features",
+  "info": {
+    "name": "ProjectFeatures",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "situation_high": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "situation_slope": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "situation_plan": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "project": {
+      "model": "project",
+      "via": "project_feature"
+    }
+  }
+}

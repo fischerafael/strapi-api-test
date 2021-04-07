@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/architects",
-      "handler": "architect.find",
+      "path": "/projects",
+      "handler": "project.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/architects/count",
-      "handler": "architect.count",
+      "path": "/projects/count",
+      "handler": "project.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/architects/:id",
-      "handler": "architect.findOne",
+      "path": "/projects/:id",
+      "handler": "project.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/architects",
-      "handler": "architect.create",
+      "path": "/projects",
+      "handler": "project.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/architects/:id",
-      "handler": "architect.update",
+      "path": "/projects/:id",
+      "handler": "project.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/architects/:id",
-      "handler": "architect.delete",
+      "path": "/projects/:id",
+      "handler": "project.delete",
       "config": {
         "policies": []
       }

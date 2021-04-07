@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "columnName": "user",
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "projects"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "public_reference",
+        "private_reference",
+        "project"
+      ],
+      "default": "public_reference",
+      "required": true
+    },
+    "evaluations": {
+      "via": "project",
+      "collection": "evaluations"
+    },
+    "project_feature": {
+      "via": "project",
+      "model": "project-features"
+    }
+  }
+}
