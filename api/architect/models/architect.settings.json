@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "architects",
+  "info": {
+    "name": "Architect"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "password",
+      "private": false,
+      "required": true,
+      "minLength": 6
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "admin",
+        "architect",
+        "client"
+      ],
+      "default": "client",
+      "required": true
+    },
+    "isPremium": {
+      "type": "boolean",
+      "default": false,
+      "private": false,
+      "required": true
+    }
+  }
+}
