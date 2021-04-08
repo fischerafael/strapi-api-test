@@ -64,9 +64,10 @@
       "default": false,
       "required": true
     },
-    "app_role": {
+    "appRole": {
       "type": "enumeration",
       "enum": [
+        "admin",
         "client",
         "architect"
       ],
@@ -74,8 +75,23 @@
       "default": "client"
     },
     "projects": {
-      "via": "user",
-      "collection": "project"
+      "collection": "project",
+      "via": "user"
+    },
+    "birth": {
+      "type": "integer",
+      "required": true,
+      "min": 1900
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ],
+      "default": "other",
+      "required": true
     }
   }
 }

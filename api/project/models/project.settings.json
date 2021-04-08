@@ -25,10 +25,10 @@
       "required": true
     },
     "user": {
-      "columnName": "user",
+      "via": "projects",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "projects"
+      "columnName": "user",
+      "model": "user"
     },
     "type": {
       "type": "enumeration",
